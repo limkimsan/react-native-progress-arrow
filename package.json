@@ -1,6 +1,6 @@
 {
   "name": "react-native-progress-arrow",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "A progress indicator in arrow style",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
