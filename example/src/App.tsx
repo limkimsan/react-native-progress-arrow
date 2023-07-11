@@ -6,8 +6,7 @@ import ProgressArrow from 'react-native-progress-arrow';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Result:</Text>
-      <ProgressArrow steps={5} step={2} color={'blue'} customLabelStyle={{color: 'red', fontWeight: 'bold', fontSize: 20}} customProgressStyle={{height: 60}} />
+      <ProgressArrow steps={5} step={2} color={'blue'} customLabelStyle={{fontWeight: 'bold'}} customContainerStyle={{height: 40, alignItems: 'center'}} customProgressStyle={{marginTop: 8}} />
     </View>
   );
 }

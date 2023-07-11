@@ -3,8 +3,8 @@ import {View, Text} from 'react-native';
 import Svg, {Polygon} from 'react-native-svg';
 
 type progressArrowProps = {
-  steps: number
-  step: number
+  steps: number | 0
+  step: number | 0
   color: string | 'blue'
   customContainerStyle: Object
   customProgressStyle: Object
