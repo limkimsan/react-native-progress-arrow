@@ -1,18 +1,12 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-progress-arrow';
+import ProgressArrow from 'react-native-progress-arrow';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <ProgressArrow steps={5} step={2} color={'blue'} customLabelStyle={{fontWeight: 'bold'}} customContainerStyle={{height: 40, alignItems: 'center'}} customProgressStyle={{marginTop: 8}} />
     </View>
   );
 }
@@ -20,7 +14,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
   },
   box: {

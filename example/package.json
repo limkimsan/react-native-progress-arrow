@@ -14,13 +14,16 @@
     "react": "18.2.0",
     "react-native": "0.71.8",
     "react-dom": "18.2.0",
-    "react-native-web": "~0.18.10"
+    "react-native-web": "~0.18.10",
+    "react-native-progress-arrow": "0.0.1",
+    "react-native-svg": "^13.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "babel-plugin-module-resolver": "^5.0.0",
     "@expo/webpack-config": "^0.17.2",
-    "babel-loader": "^8.1.0"
+    "babel-loader": "^8.1.0",
+    "react-native-svg": "^13.0.0"
   },
   "private": true
 }
