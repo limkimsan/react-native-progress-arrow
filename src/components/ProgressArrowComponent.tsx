@@ -13,7 +13,8 @@ type progressArrowProps = {
 
 const ProgressArrow = (props: progressArrowProps) => {
   const progressStepStyles = (index: number) => {
-    let defaultStyles = { width: '100%', height: 12, justifyContent: 'center', width: '100%', position: 'relative' }
+    // let defaultStyles: Record<string, string | number> = { width: '100%', height: 12, justifyContent: 'center', position: 'relative' }
+    let defaultStyles: {[key: string]: string | number} = { width: '100%', height: 12, justifyContent: 'center', position: 'relative' }
     if (index == 0)
       defaultStyles = {...defaultStyles, borderTopLeftRadius: 3, borderBottomLeftRadius: 3}
     else if (index == props.steps)
@@ -33,8 +34,8 @@ const ProgressArrow = (props: progressArrowProps) => {
   }
 
   const renderArrows = () => {
-    return [...Array(props.steps)].map((num, index) => {
-      return <View key={`arrow-${index}`} style={{zIndex: 7 - index, flex: 1}}>
+    return [...Array(props.steps).fill('arrow')].map((num, index) => {
+      return <View key={`${num}-${index}`} style={{zIndex: 7 - index, flex: 1}}>
                 <View style={progressStepStyles(index)}>
                   {renderArrowHead(index)}
                   <Text style={[{alignSelf: 'center', marginLeft: 2, paddingTop: 0.3, fontSize: 9, color: index + 1 == props.step ? props.color || 'blue' : 'white'}, props.customLabelStyle]}>
